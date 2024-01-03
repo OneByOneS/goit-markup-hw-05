@@ -673,6 +673,7 @@ img {
   display: block;
   min-width: 169px;
   height: 56px;
+  margin: auto;
 
   font-weight: 500;
   line-height: 1.5;
