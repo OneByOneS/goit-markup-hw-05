@@ -498,21 +498,22 @@ https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.m
         </div>
         <div class="footer-backdrop">
           <p class="footer-backdrop-text">Subscribe</p>
-<form class="footer-backdrop-form" action="">
-  <label class="footer-backdrop-label" for="">
-<input class="footer-backdrop-input" 
-type="email" 
-name="enter-email" 
-placeholder="E-mail">
-
-  </label>
-  <button class="subscribe-btn" type="submit">Subscribe
-    <svg class="subscribe-btn-svg" width="24" height="24">
-      <use href="./images/icons.svg#icon-subscribe"></use>
-    </svg>
-  </button>
-  
-</form>
+          <form class="footer-backdrop-form">
+            <label class="footer-backdrop-label" for="enter_email">
+              <input
+                class="footer-backdrop-input"
+                type="email"
+                name="enter-email"
+                id="enter_email"
+                placeholder="E-mail" />
+            </label>
+            <button class="subscribe-btn" type="submit">
+              Subscribe
+              <svg class="subscribe-btn-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -532,12 +533,12 @@ placeholder="E-mail">
 
         <form class="modal-form form" name="modal">
           <div class="form-wrapper">
-            <label class="form-label" for="user-name">Name</label>
+            <label class="form-label" for="user_name">Name</label>
             <div class="form-field">
               <input
                 class="form-input"
                 type="text"
-                id="user-name"
+                id="user_name"
                 name="user-name" />
               <svg class="form-icon" width="18" height="24">
                 <use
@@ -548,12 +549,12 @@ placeholder="E-mail">
           </div>
 
           <div class="form-wrapper">
-            <label class="form-label" for="user_name">Phone</label>
+            <label class="form-label" for="user_phone">Phone</label>
             <div class="form-field">
               <input
                 class="form-input"
                 type="tel"
-                id="user-name"
+                id="user_phone"
                 name="user-name" />
               <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
@@ -562,12 +563,12 @@ placeholder="E-mail">
           </div>
 
           <div class="form-wrapper">
-            <label class="form-label" for="user-name">Email</label>
+            <label class="form-label" for="user_mail">Email</label>
             <div class="form-field">
               <input
                 class="form-input"
                 type="email"
-                id="user_name"
+                id="user_mail"
                 name="user_name" />
               <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
@@ -576,31 +577,35 @@ placeholder="E-mail">
           </div>
 
           <div class="form-wrapper">
-            <label class="form-label" for="user-comment">Comment</label>
+            <label class="form-label" for="user_comment">Comment</label>
             <textarea
               class="form-comment"
               name="user-comment"
-              id="user-comment"
+              id="user_comment"
               placeholder="Text input"></textarea>
           </div>
           <div class="agreement-form">
-            
+            <input
+              class="checkbox visually-hidden"
+              id="user_privacy"
+              type="checkbox"
+              name="user-privacy"
+              value="true" />
+
+            <label class="form-agreement">
               <input
                 class="checkbox visually-hidden"
-                id="user-privacy" 
                 type="checkbox"
-                name="user-privacy"
-                value="true" />
-              
-              <label class="form-agreement" for="user-privacy">I accept the terms and conditions of the
-              <a class="form-agreement-link" href="">Privacy Policy</a></label>
+                name="user_agreement"
+                value="false" />
               <span class="form-agreement-checkbox">
                 <svg class="form-agreement-icon" width="10" height="8">
-                  <use href="./images/icons.svg#icon-checkbox"></use>
+                  <use href="./images/icons.svg#icon-сheckbox"></use>
                 </svg>
               </span>
+              I accept the terms and conditions of the
+              <a class="form-agreement-link" href="">Privacy Policy</a>
             </label>
-            
           </div>
 
           <button class="form-btn" type="submit" disabled>Send</button>
